@@ -16,7 +16,7 @@ n=length(input)/sample_per_period;
 corr_error=0.05;
 keys=['1','2','3','A';'4','5','6','B';'7','8','9','C';'*','0','#','D'];
 %% decode
-%using corrolation
+%using correlation
 decoded=[];
 for digit=1:n
 for i=1:4
@@ -27,7 +27,7 @@ for i=1:4
           Period_Start=(digit-1)*sample_per_period+1;
           Period_End=Period_Start+length(y)-1;
           a_digit=input(Period_Start:Period_End);
-         r=corr_coef(a_digit,y);
+          r=corr_coef(a_digit,y);
           if(abs(r-1)<corr_error)
               decoded=[decoded keys(i,j)];
           end

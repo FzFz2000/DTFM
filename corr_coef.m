@@ -1,5 +1,5 @@
 function [r] = corr_coef(x,y)
-%assume signals have same length
+%assume that signals have same length
 n=length(x);
 xx=0;
 yy=0;

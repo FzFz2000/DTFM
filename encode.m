@@ -13,7 +13,7 @@ sample_per_period=f_sample*T_period;
 t=0:T_sample:T_on;
 %% get the characters
 prompt="enter the input to encoede as an array of characters";
-%Ex: 'A5691*2'
+%Example: 'A5691*2'
 string=input(prompt);
 [my_rows,my_cols]=find_keys(string);
 n=length(string);
